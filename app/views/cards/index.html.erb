@@ -1,0 +1,37 @@
+<h1> Welcome to ENTR - 451 Casino </h1>
+
+<%
+ranks =[2,3,4,5,6,7,8,9,10,"jack","queen","king","ace"]
+suits =["clubs","diamonds","hearts","spades"]
+
+deck=[]
+for rank in ranks
+   for suit in suits 
+    card = "#{rank}_of_#{suit}"  
+    deck.push(card)
+    end
+end
+
+shuffled_deck = deck.shuffle
+hand = shuffled_deck[0,10]
+%>
+
+<%= shuffled_deck%>
+
+<%= shuffled_deck[0]%>
+<%= shuffled_deck[1]%>
+
+
+<% for card in shuffled_deck %>
+    <%= card %>
+<% end %>
+
+<% for card in hand %>
+    <%= card %>
+<% end %>
+
+<p>
+2 of spades
+2 of clubs
+2 of diamonds
+</p>
